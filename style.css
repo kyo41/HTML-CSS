@@ -2,10 +2,20 @@ header {
  position: absolute;
  width: 100%;
 }
-@media screen and (max-width: 787px) {
+@media screen and (max-width: 767px) {
  header {
   background: #FFF;
   position: fixed;
+  z-index: 1;
+  top: 0;
+ }
+}
+@media screen and (max-width: 1024px) {
+ header {
+  background-color: #FFF; 
+  position: fixed;
+  z-index: 1;
+  top: 0;
  }
 }
 
@@ -20,8 +30,15 @@ header {
  
 .headerlogo {
  height: 20px;
- margin-top: 20px;
+ margin-top: 15px;
  margin-left: 30px;
+ margin-bottom: 15px;
+}
+@media screen and (max-width: 767px){
+ .headerlogo {
+  height: 16px;
+  margin-left: 15px;
+ }
 }
 
 .hamburger-menu {
@@ -33,7 +50,7 @@ header {
  top: 10px;
  right: 10px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
  .hamburger-menu {
   display: none;
  }
@@ -60,13 +77,13 @@ header {
 .headermenu1 {
  list-style: none;
  display: flex;
- justify-content: right;
+ justify-content: flex-end;
  gap: 40px;
  position: relative;
- right: 60px;
+ right: 40px;
  font-weight: bold;
  }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
  .headermenu1 {
   display: none;
  }
@@ -109,7 +126,7 @@ header {
   padding-top: 100px;
   padding-bottom: 20px;
  } 
-  @media screen and (max-width: 788px) {
+  @media screen and (max-width: 767px) {
    .Firstview {
      background-image: none;
      padding-top: 40px;
@@ -119,7 +136,7 @@ header {
 .Firstview2_main {
   display: none;
  }
-  @media screen and (max-width: 788px) {
+  @media screen and (max-width: 767px) {
    .Firstview2_main {
      display: block;
      max-width: 100%;
@@ -130,53 +147,101 @@ header {
 
 .Firstview_container {
   max-width: 1140px;
+  padding-left:50px;
+  padding-right: 50px;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 }
- @media screen and (max-width: 788px) {
+ @media screen and (max-width: 767px) {
   .Firstview_container {
    margin-top: -45vw;
+  }
+ }
+@media screen and (max-width: 767px) {
+  .Firstview_container {
+   max-width: none;
+   padding-left: 20px;
+   padding-right: 20px;
   }
  }
 
 .Firstview_menu {
   width: fit-content;
+  margin-bottom: 70px;
+ }
+ @media screen and (max-width:767px) {
+  .Firstview_menu{
+  margin-bottom: 20px;
+  width: 100%;
+  }
  }
  
+ 
 .Firstviewcontent_title {
- text-align: center;
- font-size: 38px;
- font-weight: 700;
- line-height: 60px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 60px;
 } 
- @media screen and (max-width: 787px) {
+ @media screen and (max-width: 767px) {
   .Firstviewcontent_title {
-   font-size: 30px;
-   line-height: 50px;
-   word-break: keep-all;
+   font-size: 25px;
+   line-height: 36px;
+   margin-left: calc(((100vw - 100%)/2)*-1);
+   margin-right: calc(((100vw - 100%)/2)*-1); 
+   margin-bottom: 15px;
   }
  }
  
 .Pagelogo {
   display: flex;
   justify-content: center; 
-  gap: 10px;
 }
- @media screen and (max-width: 787px) {
+ @media screen and (max-width: 767px) {
   .Pagelogo {
-   display: flex;
-   justify-content: center;
+   margin-bottom: 30px;
+   width: 100%;
   }
  }
+
+.logo1 {
+ margin-right: 8px;
+}
+@media screen and (max-width: 767px){
+.logo1 {
+ width: 27.5%;
+ height: auto;
+ }
+}
+
+.logo2 {
+ margin-right:  8px;
+}
+@media screen and (max-width: 767px){
+.logo2 {
+ width: 40%;
+ height: auto;
+ }
+}
+
+.logo3 {
+ margin-right: 0;
+}
+@media screen and (max-width: 767px){
+.logo3 {
+ width: 27.5%;
+ height: auto;
+ }
+}
 
 .Firstview_list {
   display: flex;
   list-style: none;
   gap :10px;
   margin-top: 30px;
-  margin-bottom: 40px;
 }
-@media screen and (max-width: 787px) {
+ @media screen and (max-width: 767px) {
   .Firstview_list {
    display: flex;
    justify-content: center;
@@ -187,13 +252,18 @@ header {
   color: #FFFFFF;
   border-color: #FFA500;
   background-color: #FFA500;
-  padding: 20px 150px 20px;
-  font-size: 15px;
+  display: flex;
+  height: 64px; 
+  font-size: 16px;
   border-radius: 30px;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
-@media screen and (max-width: 787px) {
+ @media screen and (max-width: 767px) {
  .Firstviewcontent_button {
-  word-break: keep-all;
+  width: 100%;
  }
 }
  
@@ -221,72 +291,104 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
 }
- @media screen and (max-width: 787px) {
+ @media screen and (max-width: 767px) {
   .Secondview_container {
    padding: 0;
   }
  }
  
 .Secondview_main {
-  display: flex;
-  max-width: 1230px;
-  margin-right: auto;
-  margin-left: 60px;
+    max-width: 1140px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
- @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1024px) {
   .Secondview_main {
-   display: block;
+   flex-direction:column;
+  }
+ }
+ @media screen and (max-width: 767px) {
+  .Secondview_main {
+   max-width: none;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   padding-left: 20px;
+   padding-right: 20px;
   }
  }
  
 video {
- object-fit: contain;
- margin-left: 10%;
- margin-right: 10%;
+ width: 50%;
 }
- @media screen and (max-width: 787px) {
+ @media screen and (max-width: 1024px) {
+  video{
+  margin-left: 0;
+  width: 75%;
+  }
+ }
+ @media screen and (max-width: 767px) {
   video {
-   width: 80%;
-   height: 80%;
-   margin-top: 10px;
+  margin-bottom: 0;
+  width: 100%;
   }
  }
   
 .Secondview_title {
  font-family: 'Lato',sans-serif;
+ display: flex;
  color: #FFFFFF;
  text-align: left;
  font-weight: bold;
+ margin-left: 30px;
+ flex-direction: column;
 }
+ @media screen and (max-width: 1024px) {
+  .Secondview_title{
+  margin-left: 0;
+  width: 75%;
+  }
+ }
+ @media screen and (max-width: 1024px) {
+  .Secondview_title{
+   margin-left: 0;
+   width: 100%;
+  }
+ }
  
 .Secondview_title1 {
-  word-break: keep-all;
+  word-break: break-all;
   font-size: 32px;
   letter-spacing: 6px;
 }
- @media screen and (max-width: 787px){
+ @media screen and (max-width: 400px){
   .Secondview_title1 {
-   font-size: 5vw;
+   word-break: break-all;
+   font-size: 30px;
+   line-height: 1.4;
   }
  }
 
 .Secondview_title2 {
   word-break: break-all;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 25px;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 787px){
+ @media screen and (max-width: 767px){
  .Secondview_title2 {
-  font-size: 3vw;
+  font-size :16px;
+  line-height: 26px;
   }
  }
-
-.Secondview_link {
-  width: 100%;
-  display: flex;
-  font-size: 18px;
-  text-decoration: none;
-  color: #FFFFFF;
+ @media screen and (max-width: 1024px){
+ .Secondview_title_logo{
+  margin: auto;
+ }
 }
